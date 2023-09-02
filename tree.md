@@ -52,6 +52,27 @@ root to a specific node or leaf.
 
 #### Expression Tree: Used in compilers and interpreters, expression trees represent mathematical expressions in a tree-like structure. They help evaluate and execute expressions.
 
-Ternary Search Tree: A type of trie that combines the properties of binary search trees and tries. They are used for efficient string searching operations.
+#### Ternary Search Tree: A type of trie that combines the properties of binary search trees and tries. They are used for efficient string searching operations.
 
-Merkle Tree: Commonly used in blockchain technology and distributed systems for data verification and security, Merkle trees allow efficient verification of data consistency and integrity.
+#### Merkle Tree: Commonly used in blockchain technology and distributed systems for data verification and security, Merkle trees allow efficient verification of data consistency and integrity.
+
+#### AVL Tree: An AVL tree (Adelson-Velsky and Landis tree) is a self-balancing binary search tree data structure. It is designed to maintain its balance during insertions and deletions of nodes, ensuring that the height difference between the left and right subtrees (known as the "balance factor") of any node in the tree is limited to a small constant.
+
+Here are the key characteristics and properties of an AVL tree:
+
+Binary Search Tree (BST) Property: Like any binary search tree, an AVL tree maintains the BST property, where for each node:
+
+All nodes in its left subtree have values less than the node's value.
+All nodes in its right subtree have values greater than the node's value.
+Balance Factor: For each node in an AVL tree, the difference in height between its left and right subtrees (the balance factor) must be no greater than 1. In other words, the balance factor of any node must be -1, 0, or 1.
+
+Balancing Operations: When an insertion or deletion operation is performed that violates the AVL tree property (i.e., causes the balance factor to be greater than 1 or less than -1), the tree is rebalanced using rotation operations. These rotations maintain the balance of the tree while preserving the BST property.
+
+Efficiency: Because of its self-balancing property, the height of an AVL tree remains logarithmic in relation to the number of nodes. This ensures that search, insertion, and deletion operations all have O(log n) time complexity on average, making AVL trees efficient for various applications.
+
+AVL trees are used in scenarios where it's crucial to maintain a balanced binary search tree to ensure predictable and efficient performance. Common use cases for AVL trees include:
+
+Database indexing: They are used to speed up search and retrieval operations in databases.
+Balanced binary search: When you need to maintain a sorted collection of data efficiently.
+Implementing other self-balancing data structures: AVL trees have served as the basis for other self-balancing trees like Red-Black trees and Splay trees.
+It's important to note that while AVL trees provide excellent balance, the overhead of maintaining this balance through rotations can make them slightly slower than simpler data structures like binary search trees for some specific use cases. In such cases, you might choose other tree structures based on the specific requirements of your application.
